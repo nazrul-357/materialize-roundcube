@@ -1,5 +1,5 @@
 # materializerc
-Materialize CSS skin for Roundcube, optimized for mobile view.
+Materialize CSS skin for Roundcube, optimized for mobile view. See more Materializecss framework on <http://materializecss.com/>.
 
 This repository consists of two important directories to run the materialized view for Roundcube; **skins** and **plugins**.
 
@@ -17,7 +17,7 @@ This directory contains **materialize** plugin which must be put in the **plugin
 ```php
 ...
 $config['plugins'] = array(
-  ...  
+	...  
 	'materialize',	
 );
 ```
