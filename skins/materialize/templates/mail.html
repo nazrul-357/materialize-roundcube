@@ -1,0 +1,45 @@
+<roundcube:object name="doctype" value="html5" />
+<html>
+<head>
+<title><roundcube:object name="pagetitle" /></title>
+<roundcube:include file="/includes/links.html" />
+</head>
+<body class="minwidth">
+
+<header>
+  <roundcube:include file="/includes/header.html" />
+</header>
+
+<main class="grey lighten-1">
+		<div class="col s12">				
+			<ul class="collection">
+				<roundcube:object name="materialize-maillist" />
+			</ul>
+		</div>
+</main>
+
+<div class="fixed-action-btn">
+	<roundcube:button command="compose" type="link" class="button compose btn-floating btn-large waves-effect waves-light blue darken-1" label="compose" title="writenewmessage" />
+</div>
+
+<div id="modal-about" class="modal bottom-sheet">
+  <div class="modal-content">
+    <h5>Materialize Roundcube</h5>
+    <p>Roundcube webmail</p>
+    <a class="gitit" href="https://github.com/nazrul-357">
+    	<p class="valign-wrapper grey-text text-darken">
+    		Visit MaterializeRC on GitHub&nbsp;&nbsp;
+    		<img src="skins/materialize/images/GitHub-Mark-32px.png" alt="https://github.com/nazrul-357"></img>
+    	</p>
+    	
+    </a>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">Dismiss</a>
+  </div>
+</div>
+
+<roundcube:include file="/includes/footer.html" />
+
+</body>
+</html>
