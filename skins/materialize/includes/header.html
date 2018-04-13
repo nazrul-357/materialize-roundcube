@@ -1,0 +1,71 @@
+
+<div class="navbar-fixed">
+	<nav>
+		<div class="nav-wrapper grey darken-3">			
+			<ul id="nav-mobile" class="left">
+				<li class="tab">
+					<a href="#" data-activates="slide-out" class="button-collapse-materialize show-on-large limorevert" role="button" style="line-height: 49px;">
+						<i id="morevert" class="material-icons grey-text text-lighten-4">
+							menu
+						</i>
+					</a>
+				</li>
+				<a href="#" class="brand-logo center">
+					<roundcube:object name="logo" src="/images/roundcube_logo.png" id="toplogo" alt="Logo" onclick="if(window.rcmail)rcmail.command('switch-task','mail')" />
+				</a>
+			</ul>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">			
+		        <li>
+		        	<roundcube:if condition="!env:extwin &amp;&amp; !env:framed" />
+					<span class="username"><roundcube:object name="username" /></span>
+		        </li>
+		    </ul>
+		</div>
+	</nav>
+</div>
+
+<!-- hide on large: 'sidenav-fixed' show on large 'fixed' -->
+<ul id="slide-out" class="side-nav sidenav-fixed">
+    <li class="sidenav-header blue darken-2 card">
+    	<roundcube:if condition="!env:extwin &amp;&amp; !env:framed" />
+    	<div class="card-image">
+    		<img src="/images/roundcube_logo.png" alt="">
+			<span class="username card-title">
+				<div class="row">
+					<div class="col s12">
+						<div id="username-avatar" class="col s3">
+							<roundcube:object name="materialize-avatar" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12">
+						<roundcube:object name="username" />
+					</div>
+				</div>
+			</span>
+		</div>
+	</li>
+    <li class="">
+	    <ul class="collapsible" data-collapsible="accordion">
+	  		<li class="active">
+		  		<a class="collapsible-header waves-effect waves-blue active">
+		  			<i class="material-icons">mail</i>Mail 
+		  			<i class="material-icons right" style="margin-right:0;">arrow_drop_down</i>
+		  		</a>
+	  		
+		  		<div class="collapsible-body">
+		  			<div class="row">
+		  				<div class="col s12 m12">			         	                  
+			                  <roundcube:object name="materialize-folders" />
+			                  <li><div class="divider"></div></li>      
+		                </div>
+	                </div>
+	            </div>
+	    	</li>	    	
+	    </ul>
+    </li>
+    <li ><a class="waves-effect waves-light modal-trigger" href="#modal-about"><i class="material-icons">help</i>About</a>
+    </li>
+    <li ><roundcube:button command="logout" label="logout" class="button-logout" classSel="button-logout active" innerClass="button-inner" /></li>
+</ul>
