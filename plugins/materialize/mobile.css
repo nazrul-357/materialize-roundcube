@@ -1,0 +1,632 @@
+body {
+	display: flex;
+	display: -webkit-flex;
+	min-height: 100vh;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+	flex-shrink: 0;
+	flex-basis: auto;
+	
+	-webkit-flex-grow: 1;
+	-webkit-flex-shrink: 0;
+	-webkit-flex-basis: auto;
+}
+
+/** LOGINFORM **/
+
+.row.loginform-container {
+	padding-top: 2rem;
+}
+
+.row.loginform-container .container {
+	width: 99%;
+	
+}
+
+.row.loginform-container .container label {
+	color: #212121;
+}
+
+#login-form #message {
+	text-align: center;
+	padding-top: 0.7rem;
+}
+
+/** LOGINPAGE FOOTER **/
+
+footer.page-footer.logincopyright {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+#bottomline {
+	padding-left: 1.1rem;
+	font-size: 10px;
+	text-align: center;
+}
+
+#bottomline .footer-copyright {
+	margin-left: -1.1rem;
+	margin-top: 1rem;
+}
+
+footer .footer-copyright div {
+	text-align: center;
+	width: 100%;
+}
+
+/** NAV **/
+
+.brand-logo img {
+	margin-top: 5px;
+}
+
+/** SIDENAV **/
+
+.sidenav-header {
+    height: 196px;
+    padding-top: 0px;
+    margin-top: 0rem;
+}
+
+.card {
+	padding-top: 0rem;
+}
+
+.card-title {
+	font-size: 15px !important;
+	line-height: 15px;
+}
+
+.card-image img {
+	overflow: hidden;
+} 
+
+.sidenav-header .username {
+	margin-bottom: -1rem;
+}
+
+.sidenav-header #username-avatar {
+	margin-top: 0rem;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.sidenav-header #username-avatar span {
+	padding: 20px;
+}
+
+.sidenav-header .card-image {
+	height: inherit;
+}
+
+#avatar-none {
+	text-align: center;
+	vartical-align: middle;
+	font-size: 1.3rem;
+	padding-top: 11px;
+	color: white;
+}
+
+/** MAIN **/
+
+main {
+	overflow-x: hidden
+}
+
+/**
+#mail.container {
+	width: 100% !important;
+}
+
+#mail .col.xl11 {
+	width: 89.666667%;
+}
+
+#mail .col.offset-xl2 {
+	
+}
+
+**/
+
+/** FOOTER **/
+
+#messagestack {
+	position: fixed;
+	bottom: 0;
+	border: 0px solid red;
+	width: 100%;
+}
+
+/** components **/
+
+.navtitle {
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.pretty-recipient a {
+	display: inline-block;
+	padding: 7px 10px 7px 10px;
+  	margin: 1px 1px 1px 1px;
+  	border-radius: 20px;
+  	color: #fff;
+  	width: inherit;
+}
+
+.pretty-recipient .valid {
+	background-color: #2196f3;
+}
+
+.pretty-recipient .invalid {
+	background-color: #b71c1c;
+}
+
+#_to { }
+
+.compose .collection-item .row {
+	margin: 0px !important;
+}
+
+.hidden {
+	display: none;
+}
+
+.tablewrap {
+	overflow-x: scroll;
+}
+
+.btnCollapse:after {
+	cursor: pointer;
+	content: "View details";
+}
+
+.btnCollapse.active:after {
+	content: "Hide details";
+}
+
+
+.customcollapse {
+	display: none;
+	font-size: smaller;
+}
+
+.customcollapse table td{
+	padding: 0 5px !important;
+	vertical-align: text-top !important;
+}
+
+.email-unread .email-title,
+.email-unread .email-time,
+.email-unread .email-subject,
+.email-unread .email-attachment {
+	font-weight: bold;
+	color: black !important;
+}
+
+.email-unread .email-time span {
+	color: #2196f3 !important;
+}
+
+.collection {
+	font-size: 0.7rem !important;
+}
+
+.collection-item.avatar {
+	min-height: 65px !important;
+}
+
+.collection.email-body {
+	border: 0px;
+	overflow: visible;
+}
+
+.email-body {
+	overflow: visible;
+	overflow-x: hidden;	
+}
+
+.email-body blockquote {
+	
+}
+
+.email-body .email-subject {
+	font-size: 1rem;
+}
+
+ul.tabs.email-actions {
+	position: fixed;
+	bottom: 0;
+	z-index: 1;
+}
+
+#attachment-list {
+	z-index: 2;
+}
+
+.email-attachment {
+	vertical-align: top;
+	padding-top: 2px;
+	padding-right: 3px;
+}
+
+.email-unread .email-attachment {
+	font-weight: normal;
+}
+
+li.collection-item {
+	display: list-item !important;
+}
+
+div.ui-loader { display: none;}
+
+a.email-list { 
+	color: inherit;
+}
+
+ul#email-headers {
+	border: 0px;
+}
+
+ul#email-headers li .email-from {
+	font-size: 0.9rem;
+}
+
+div.pre {
+	font-family: "Roboto" !important;
+}
+
+div.email-actions {
+	padding-top: 25px !important;
+	
+}
+
+.dropdown-trigger {
+	width: 200px;
+}
+
+ul.dropdown-content li * {
+	padding: 10px !important;
+	padding-left: 20px !important;
+	font-size: 14px;
+	line-height: 10px;
+	color: #212121;
+}
+
+ul.dropdown-content li {
+	min-height: 0px;
+	line-height: 0px;
+}
+
+ul.attachmentslist li a.drop {
+	display: none;
+}
+
+ul.collection.compose {
+	margin-bottom: 0rem !important;
+}
+
+ul.compose form textarea.materialize-textarea {
+	padding: unset;
+	min-height: 22px;
+	margin: unset;
+	
+	border: none !important;
+	box-shadow: none !important;
+	outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    
+}
+
+ul.compose form input#compose-subject {
+	height: 2rem !important;
+	font-size: 1rem;
+	border: 0rem;
+	resize: none;
+}
+
+ul.compose form input#compose-subject:focus {
+	border: none !important;
+	box-shadow: none !important;
+	outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+ul.compose form li#liSubject .row {
+	margin-bottom: unset;
+}
+
+/* ul.compose form li#liSubject,*/
+.header-shown {
+	border-top: 1px solid #e0e0e0;
+}
+
+.row.composebody {
+	margin: 0rem 0rem 0rem 0rem;
+	border: 0 !important;
+}
+
+.row.composebody textarea,
+.row.composebody textarea:focus {
+	border: none !important;
+	box-shadow: none !important;
+	outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+ul.compose form span#compose-headers {
+	display: none;
+}
+
+.row.composebody textarea {
+	/**left: auto !important;**/
+	width: 99% !important;
+	padding: 0rem !important;
+	font-family: inherit !important;
+	font-size: 1rem !important;
+}
+
+ul.compose form li {
+	padding: 0rem !important;
+	/**height: 4rem !important;**/
+}
+
+ul.compose form li {
+	line-height: normal !important;
+}
+
+ul.compose form li label{
+	margin-top: -0.7rem !important;
+}
+
+ul.compose form a.dropdown-trigger span i {
+
+}
+
+div.dummybox {
+	position: relative;
+	height: 1rem;
+}
+
+div.attachmentscontainer {
+	/**border: 0px solid #eee;**/
+}
+
+div.attachmentscontainer {
+	display: none;
+}
+
+p.image-attachment {
+	display: none;
+}
+
+.attachmentslist li a.delete,
+.attachmentslist li a.cancelupload {
+	width: auto !important;
+	text-indent: inherit !important;
+}
+
+#compose-content {
+	all: unset;
+}
+
+/** Addressbook **/
+#rcmKSearchpane {
+	overflow-y: scroll;
+	height: 80%;
+}
+
+#rcmKSearchpane li {
+	background-color: #eee;
+	line-height: 1.5rem;
+	padding: 10px 20px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+
+
+/** Attachments **/
+
+.attachmentslist {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.attachmentslist li {
+	display: block;
+	position: relative;
+	background: url(images/filetypes.png?v=a0f5.4718) 0 0 no-repeat;
+	margin-bottom: 1px;
+	line-height: 24px;
+}
+
+.attachmentslist li.txt,
+.attachmentslist li.text {
+	background-position: 0 -416px;
+}
+
+.attachmentslist li.pdf {
+	background-position: 0 -26px;
+}
+
+.attachmentslist li.doc,
+.attachmentslist li.docx,
+.attachmentslist li.msword {
+	background-position: 0 -52px;
+}
+
+.attachmentslist li.odt {
+	background-position: 0 -78px;
+}
+
+.attachmentslist li.xls,
+.attachmentslist li.xlsx,
+.attachmentslist li.msexcel {
+	background-position: 0 -104px;
+}
+
+.attachmentslist li.ods {
+	background-position: 0 -130px;
+}
+
+.attachmentslist li.zip,
+.attachmentslist li.gz {
+	background-position: 0 -156px;
+}
+
+.attachmentslist li.rar {
+	background-position: 0 -182px;
+}
+
+.attachmentslist li.image {
+	background-position: 0 -208px;
+}
+
+.attachmentslist li.jpg,
+.attachmentslist li.jpeg {
+	background-position: 0 -234px;
+}
+
+.attachmentslist li.png {
+	background-position: 0 -260px;
+}
+
+.attachmentslist li.m4p {
+	background-position: 0 -286px;
+}
+
+.attachmentslist li.mp3,
+.attachmentslist li.audio {
+	background-position: 0 -312px;
+}
+
+.attachmentslist li.video {
+	background-position: 0 -338px;
+}
+
+.attachmentslist li.ics,
+.attachmentslist li.calendar {
+	background-position: 0 -364px;
+}
+
+.attachmentslist li.vcard {
+	background-position: 0 -390px;
+}
+
+.attachmentslist li.sig,
+.attachmentslist li.pgp-signature,
+.attachmentslist li.pkcs7-signature {
+	background-position: 0 -442px;
+}
+
+.attachmentslist li.html {
+	background-position: 0 -468px;
+}
+
+.attachmentslist li.eml,
+.attachmentslist li.rfc822 {
+	background-position: 0 -494px;
+}
+
+.attachmentslist li.ppt,
+.attachmentslist li.pptx,
+.attachmentslist li.ppsx,
+.attachmentslist li.vnd.mspowerpoint {
+	background-position: 0 -520px;
+}
+
+.attachmentslist li.odp,
+.attachmentslist li.otp {
+	background-position: 0 -546px;
+}
+
+.attachmentslist li.application.asc {
+	background-position: 0 -598px;
+}
+
+.attachmentslist li.application.pgp-keys {
+	background-position: 0 -572px;
+}
+
+
+.attachmentslist li a {
+	display: block;
+	color: #333;
+	font-weight: bold;
+	padding: 3px 15px 3px 30px;
+	text-decoration: none;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 20px;
+	outline: none;
+}
+
+.attachmentslist li a.drop {
+	background: url(images/buttons.png?v=d70c.9130) no-repeat scroll center -1570px;
+	width: 14px;
+	height: 20px;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0;
+	overflow: hidden;
+	text-indent: -5000px;
+	outline: none;
+}
+
+#compose-attachments .attachmentslist li a.drop {
+	right: 24px;
+}
+
+.attachmentslist li a:focus,
+.attachmentslist li a.drop:focus {
+	background-color: rgba(30,150,192, 0.5);
+	border-radius: 2px;
+}
+
+#compose-attachments ul li {
+	padding-right: 24px;
+}
+
+.attachmentslist li a:hover {
+	text-decoration: underline;
+}
+
+.attachmentslist li.uploading {
+	background: url(images/ajaxloader.gif?v=c252.1434) 4px 4px no-repeat;
+	padding-left: 30px;
+}
+
+.attachmentslist li a.delete,
+.attachmentslist li a.cancelupload {
+	position: absolute;
+	top: 4px;
+	right: 0;
+	width: 20px;
+	height: 18px;
+	padding: 0;
+	text-decoration: none;
+	text-indent: -5000px;
+	background-image: url(images/buttons.png?v=d70c.9130);
+	background-position: -6px -338px;
+	background-repeat: no-repeat;
+}
+
+.attachmentslist li a.cancelupload {
+	background-position: -6px -378px;
+}
