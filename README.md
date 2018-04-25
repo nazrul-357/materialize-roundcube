@@ -1,4 +1,4 @@
-# materializerc
+# Materialize Roundcube
 Materialize CSS skin for Roundcube, optimized for mobile view. See more Materializecss framework on <http://materializecss.com/>.
 
 This repository consists of two important directories to run the materialized view for Roundcube; **skins** and **plugins**.
