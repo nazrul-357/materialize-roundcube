@@ -1,0 +1,70 @@
+<roundcube:object name="doctype" value="html5" />
+<html>
+<head>
+<title><roundcube:object name="pagetitle" /></title>
+<roundcube:include file="/includes/links.html" />
+</head>
+
+<body class="minwidth">
+
+<header>
+<roundcube:include file="/includes/messageheader.html" />
+</header>
+
+<main>
+<div class="container">
+	<div class="row">
+			<div class="col s12 m7 l7 ">
+				<ul class="collection email-body">
+					<p class="subject email-subject">
+						<roundcube:object name="messageHeaders" valueOf="subject" />
+						<span class="email-tag grey lighten-3">inbox</span>
+					</p>
+					<hr class="grey-text text-lighten-2">
+					<div class="row">
+						<div class="col s10 m10 l10">
+							<ul id="email-headers" class="collection">
+								<li class="collection-item avatar">
+			                            <roundcube:object name="materialize-messageheaders" />
+								</li>
+							</ul>
+						</div>
+						<div class="col s2 m2 l2 email-actions">
+							<roundcube:include file="/includes/mailtoolbar.html" />
+							<a href="#!" class="dropdown-trigger" data-activates="email-actions-dropdown">
+							<span><i class="material-icons grey-text text-darken-3">more_vert</i></span>
+							</a>					
+						</div>
+					</div>
+					<roundcube:object name="messageObjects" id="message-objects" />				
+					<roundcube:object name="messageBody" id="messagebody" headertableclass="message-partheaders headers-table" />
+				</ul>
+			</div>
+	</div>
+	
+	<div class="col s12 m12 l12">
+		<div class="collection">
+			<roundcube:object name="messageAttachments" id="attachment-list" class="attachmentslist collection-item grey lighten-3" />
+		</div>
+	
+</div>
+</div>
+</main>
+
+<footer class="page-footer footer-fixed transparent">
+<ul class="tabs grey email-actions">
+       <li class="tab">
+       		<roundcube:button command="reply" type="link" class="button reply disabled ultra-small" classAct="button reply" classSel="button reply pressed" label="reply" title="replytomessage" />
+       </li>
+       <li class="tab">
+       		<roundcube:button command="reply-all" type="link" class="button reply-all disabled" classAct="button reply-all" classSel="button reply-all pressed" label="replyall" title="replytoallmessage" />
+       </li>
+       <li class="tab">
+       		<roundcube:button type="link" command="forward-inline" label="forward" prop="sub" classAct="forwardlink active" class="forwardlink" />
+       </li>
+</ul>
+</footer>
+<roundcube:include file="/includes/footer.html" />
+
+</body>
+</html>
