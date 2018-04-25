@@ -1,0 +1,18 @@
+<div class="navbar-fixed">
+	<nav>	
+		<div class="nav-wrapper grey lighten-5">			
+			<ul id="nav-mobile" class="left red-text text-darken-4">
+				<li><a href="./?_task=mail&_action=list"><i class="material-icons red-text text-darken-4">arrow_back</i></a></li>
+				<li class='navtitle'>Compose</li>
+			</ul>	
+			<ul id="nav-mobile" class="right">
+				<li>
+					<a class="modal-trigger" href="#modal1" onclick="UI.show_uploadform(event);return false"><i class="material-icons red-text text-darken-4">attachment</i></a>
+				</li>
+				<li>
+					<roundcube:button command="send" type="link" class="button send" classAct="button send" label="send" title="sendmessage" tabindex="2" />
+				</li>				
+		    </ul>
+		</div>
+	</nav>
+</div>
