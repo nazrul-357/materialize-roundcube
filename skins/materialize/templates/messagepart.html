@@ -1,0 +1,50 @@
+<roundcube:object name="doctype" value="html5" />
+<html>
+<head>
+<title><roundcube:object name="pagetitle" /></title>
+<roundcube:include file="/includes/links.html" />
+</head>
+
+<body class="minwidth">
+
+<header>
+<roundcube:include file="/includes/messageheader.html" />
+</header>
+
+<main>
+<div class="container">
+	<div class="row">
+			<div class="col s12 m7 l7 ">
+				<ul class="collection email-body">
+					<p class="subject email-subject">
+						<roundcube:var name="env:filename" />
+						<span class="email-tag grey lighten-3">attachment</span>
+					</p>
+					<hr class="grey-text text-lighten-2">
+					<p>	
+						<roundcube:label name="properties" />
+						<roundcube:object name="messagePartControls" class="listing" />
+					</p>
+					<p>
+						<roundcube:label name="arialabelattachmentpreview" />
+						<roundcube:object name="messagePartFrame" id="messagepartframe" frameborder="0" title="arialabelattachmentpreview" />
+					</p>
+				</ul>
+			</div>
+	</div>
+	
+</div>
+</main>
+
+<footer class="page-footer footer-fixed transparent">
+<ul class="tabs grey lighten-4 email-actions">
+       <li class="tab">
+       		<roundcube:button command="download" type="link" class="button download disabled" classAct="button download" classSel="button download pressed" label="download" title="download" />
+       </li>
+</ul>
+</footer>
+
+<roundcube:include file="/includes/footer.html" />
+
+</body>
+</html>
