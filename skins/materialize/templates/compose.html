@@ -1,0 +1,115 @@
+<roundcube:object name="doctype" value="html5" />
+<html>
+<head>
+<title><roundcube:object name="pagetitle" /></title>
+<roundcube:include file="/includes/links.html" />
+<roundcube:if condition="config:enable_spellcheck" />
+<link rel="stylesheet" type="text/css" href="/googiespell.css" />
+<roundcube:endif />
+</head>
+<body class="minwidth">
+
+<roundcube:include file="/includes/composeheader.html" />
+
+<ul class="collection compose">
+	<roundcube:form name="form" method="post" id="compose-content" class="uibox col s12">
+	<!-- <form class="col s12"> -->
+		<li class="collection-item">
+			<div class="row">
+				<roundcube:object name="composeHeaders" part="from" form="form" id="_from" tabindex="1" style="display: none;"/>
+				<div class="input-field col s1">
+					<label for="_to"><roundcube:label name="to" /></label>
+				</div>
+				<div class="input-field col s9">
+					<div class="small pretty-recipient" id="dummyTo"></div>
+					<textarea class="materialize-textarea dummy-recipient"></textarea>
+					<roundcube:object name="composeHeaders" class="hidden" part="to" form="form" id="_to" cols="70" rows="1" tabindex="1" aria-required="true" />
+				</div>
+				<div class="input-field col s1">
+					<a href="#!" class="dropdown-trigger" id="compose-add-headers" >
+					<span><i class="material-icons blue-text text-darken-4">expand_more</i></span>
+					</a>
+				</div>
+			</div>
+		</li>
+		<span id="compose-headers">
+		<li class="collection-item">
+			<div class="row">
+					<div class="input-field col s1">
+						<label for="_cc"><roundcube:label name="cc" /></label>
+					</div>
+					<div class="input-field col s11">
+						<div class="small pretty-recipient" id="dummyCc"></div>
+						<textarea class="materialize-textarea dummy-recipient"></textarea>
+						<roundcube:object name="composeHeaders" class="hidden" part="cc" form="form" id="_cc" cols="70" rows="1" tabindex="1" aria-required="true" />					
+					</div>
+			</div>
+		</li>
+		<li class="collection-item">
+			<div class="row">
+					<div class="input-field col s1">
+						<label for="_bcc"><roundcube:label name="bcc" /></label>
+					</div>
+					<div class="input-field col s11">
+						<div class="small pretty-recipient" id="dummyBcc"></div>
+						<textarea class="materialize-textarea dummy-recipient"></textarea>
+						<roundcube:object name="composeHeaders" class="hidden" part="bcc" form="form" id="_bcc" cols="70" rows="1" tabindex="1" aria-required="true" />					
+					</div>
+			</div>
+		</li>
+		</span>
+		<li class="collection-item" id="liSubject">
+			<div class="row">
+					<div class="input-field col s12">
+						<roundcube:object name="composeSubject" id="compose-subject" form="form" tabindex="1" placeholder="Subject" />					
+					</div>
+			</div>
+		</li>
+		
+	
+</ul>
+
+<div class="container" style="width:100%;">
+	<div class="row composebody">
+			<div class="input-field col s12">
+				<div class="col s12">
+					<roundcube:object name="composeBody" id="composebody" form="form" cols="70" rows="20" tabindex="1" placeholder="Compose email" class="materialize-textarea" />
+				</div>								
+			</div>
+			
+	</div>
+	<div class="dummybox"></div>
+	<div class="collection attachmentscontainer">
+		<roundcube:object name="composeAttachmentList" id="attachment-list" class="attachmentslist collection-item grey lighten-3" tabindex="1" />
+	</div>
+</div>
+
+<roundcube:if condition="config:smtp_server != '' and !in_array('dsn_default', (array)config:dont_override)" />
+
+</form>
+
+<div id="modal1" class="modal propform popupdialog">
+	<div class="modal-content">
+		<h6><roundcube:label name="arialabelattachmentuploadform" /></h6>
+		<p><roundcube:object name="composeAttachmentForm" id="uploadform" buttons="no" /></p>
+	</div>
+	<div class="modal-footer">
+		<roundcube:button command="send-attachment" type="input" class="button mainaction modal-action modal-close waves-effect waves-green btn-flat" label="upload" />
+		<roundcube:button name="close" type="input" class="button modal-action modal-close waves-effect waves-green btn-flat" label="cancel" onclick="UI.show_uploadform()" />
+	</div>
+</div>
+
+<div id='modalrecipremove' class='modal'>
+	<div class="modal-content">
+		<h5></h5>
+		<p></p>
+	</div>
+	<div class="modal-footer">
+		<a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">Remove</a>
+	</div>
+</div>
+
+<roundcube:include file="/includes/footer.html" />
+
+</body>
+</html>
