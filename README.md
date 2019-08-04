@@ -21,3 +21,11 @@ $config['plugins'] = array(
 	'materialize',	
 );
 ```
+
+## Important Notes
+* Do not apply this skin on production without testing first
+* Backup your existing Roundcube installation first
+* Do not enable the skin from anything other than Roundcube's main `config.inc.php`
+* To **disable the skin**, edit the Roundcube's main `config.ing.php`:
+  * change `$config['skin']` to any skin other than `materialize`.
+  * remove `materialize` from `$config['plugins']`.
